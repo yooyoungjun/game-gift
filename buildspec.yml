@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    _PROJECT_NAME: "gift"
+    _PROJECT_NAME: "game-gift"
 
 phases:
   install:

@@ -15,19 +15,6 @@ public class Gift {
     private Long walletId;
     private String status;
 
-    @PostPersist
-    public void onPostPersist(){
-        Used used = new Used();
-        BeanUtils.copyProperties(this, used);
-        used.publishAfterCommit();
-
-        try {
-            Thread.currentThread().sleep((long) (400 + Math.random() * 220));
-        } catch(InterruptedException e) {
-            e.printStackTrace();
-        }
-
-    }
 
     public Long getId() {
         return id;
